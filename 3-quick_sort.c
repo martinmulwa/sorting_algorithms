@@ -1,28 +1,6 @@
 #include "sort.h"
 
 /**
- * quick_sort - sorts an array of integers in ascending order using the,
- * Quick sort sort algorithm.
- *
- * @array: pointer to array of integers to be sorted.
- * @size: number of integers in array.
- *
- * Implement the Lomuto partition scheme.
- * The pivot should always be the last element of the partition being sorted.
- * Print the array after each time you swap two elements.
- *
- * Return: No return.
- */
-void quick_sort(int *array, size_t size)
-{
-	/* An array does not need to be sorted if its size is less than 2 */
-	if (!array || size < 2)
-		return;
-
-	quickSort(array, 0, size - 1, size);
-}
-
-/**
  * partition - function that partitions an array.
  *
  * @array: pointer to array of integers to be partitioned.
@@ -81,7 +59,7 @@ void quickSort(int *array, int beg, int end, int size)
 {
 	int partion_index;
 
-	if (beg <= end)
+	if (beg < end)
 	{
 		partion_index = partition(array, beg, end, size);
 
@@ -91,4 +69,26 @@ void quickSort(int *array, int beg, int end, int size)
 		/* recursive call on the right of pivot */
 		quickSort(array, partion_index + 1, end, size);
 	}
+}
+
+/**
+ * quick_sort - sorts an array of integers in ascending order using the,
+ * Quick sort sort algorithm.
+ *
+ * @array: pointer to array of integers to be sorted.
+ * @size: number of integers in array.
+ *
+ * Implement the Lomuto partition scheme.
+ * The pivot should always be the last element of the partition being sorted.
+ * Print the array after each time you swap two elements.
+ *
+ * Return: No return.
+ */
+void quick_sort(int *array, size_t size)
+{
+	/* An array does not need to be sorted if its size is less than 2 */
+	if (!array || size < 2)
+		return;
+
+	quickSort(array, 0, size - 1, size);
 }
