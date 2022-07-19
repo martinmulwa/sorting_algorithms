@@ -1,5 +1,4 @@
 #include "sort.h"
-#define MAX 7
 
 /**
  * shell_sort - function that sorts an array of integers in ascending,
