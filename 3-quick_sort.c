@@ -81,7 +81,7 @@ void quickSort(int *array, int beg, int end, int size)
 {
 	int partion_index;
 
-	if (beg < end)
+	if (beg <= end)
 	{
 		partion_index = partition(array, beg, end, size);
 
