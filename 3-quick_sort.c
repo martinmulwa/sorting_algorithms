@@ -46,10 +46,13 @@ int partition(int *array, int beg, int end, int size)
 	{
 		if (array[i] <= pivot)
 		{
-			temp = array[partition_index];
-			array[partition_index] = array[i];
-			array[i] = temp;
-			print_array(array, size);
+			if (partition_index != i)
+			{
+				temp = array[partition_index];
+				array[partition_index] = array[i];
+				array[i] = temp;
+				print_array(array, size);
+			}
 			partition_index++;
 		}
 	}
