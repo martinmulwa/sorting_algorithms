@@ -56,14 +56,15 @@ int partition(int *array, int beg, int end, int size)
 			partition_index++;
 		}
 	}
-	/* swap pivot with element at partion index */
-	temp = array[partition_index];
-	array[partition_index] = array[end];
-	array[end] = temp;
-	print_array(array, size);
-
+	if (partition_index != end)
+	{
+		/* swap pivot with element at partion index */
+		temp = array[partition_index];
+		array[partition_index] = array[end];
+		array[end] = temp;
+		print_array(array, size);
+	}
 	return (partition_index);
-
 }
 
 /**
