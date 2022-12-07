@@ -20,6 +20,18 @@ void counting_sort(int *array, size_t size)
 
 	if (!array || size < 2)
 		return;
+
+	/**
+	 * Find the maximum value in the array.
+	 * Create a count array of size max + 1.
+	 * Initialize all values in count array as 0.
+	 * Store the count of each element in the count array.
+	 * Modify the count array by adding the previous counts.
+	 * Output each object from the input sequence followed by decreasing
+	 * its count by 1.
+	 * Print the sorted array.
+	 */
+
 	for (i = 0; i < (int)size; i++)
 		if (array[i] > max)
 			max = array[i];
