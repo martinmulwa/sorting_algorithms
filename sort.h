@@ -44,4 +44,7 @@ void shell_sort(int *array, size_t size);
 /* 102-counting_sort.c */
 void counting_sort(int *array, size_t size);
 
+/* 105-radix_sort.c */
+void radix_sort(int *array, size_t size);
+
 #endif
